@@ -36,6 +36,10 @@ data_amp_avg=mean(data_s_z); %calculate the avg amplitude
 data_std=std(data_s_z); %standard dev for absolute amplitudes
 data_normax=data_amp_avg+(data_std*3); %maximum expected value in normal distribution defined as 3stds above mean
 
+%% 
+% something to add is that the start and end of the ripple event should not 
+% be from threshold but should trace back to the mean (z-scored equaled 
+% zero) for the start and end of the event
 
 %% SPW-R detection
 data_flag=data_s_z>data_normax;% returns boolean for all cells in the absoluted signal that are greater than normal max
